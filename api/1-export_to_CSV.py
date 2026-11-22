@@ -9,8 +9,8 @@ if __name__ == "__main__":
     if len(sys.argv) < 2:
         sys.exit(1)
 
-    emp_id = sys.argv[1][1]
-    base_url = "https://typicode.com"
+    emp_id = sys.argv[1]
+    base_url = "https://jsonplaceholder.typicode.com"
 
     user = requests.get("{}/users/{}".format(base_url, emp_id)).json()
     todos = requests.get("{}/todos".format(base_url),
